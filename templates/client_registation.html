@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>E-Loan-system</title>
+  <!-- Bootstrap core CSS-->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="../static/css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">loan system</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="{{ url_for('home_f') }}">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Home</span>
+          </a>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+  <body class="bg-dark">
+  <div class="container">
+    <div class="card card-register mx-auto mt-5">
+      <div class="card-header">Register a Client</div>
+      <div class="card-body">
+       <form action="client_register" method="post">
+          <div class="form-group">
+                <label for="exampleInputName">First name  :</label>
+                <input class="form-control" id="exampleInputName" type="text" name="f_name" aria-describedby="nameHelp" placeholder="Enter first name" required="">
+              </div>
+          <div class="form-group">
+                <label for="exampleInputName">Mid name  :</label>
+                <input class="form-control" id="exampleInputName" type="text" name="m_name" aria-describedby="nameHelp" placeholder="Enter mid name" required="">
+              </div>
+          <div class="form-group">
+                <label for="exampleInputName">Last Name :</label>
+                <input class="form-control" id="exampleInputName" type="text" name="l_name" aria-describedby="nameHelp" placeholder="Enter Last Name">
+              </div>
+           <div class="form-group">
+                <label for="exampleInputName">Nic Number</label>
+                <input class="form-control" id="exampleInputName" type="text" name="nic" aria-describedby="nameHelp" placeholder=" Enter NIC Number" required="">
+              </div>
+           <div class="form-group">
+                <label for="exampleInputName">Birth Date</label>
+                <input class="form-control" id="exampleInputName" type="date" name="dob" aria-describedby="nameHelp" placeholder=" Enter Birth Date" required="">
+              </div>
+           <div class="form-group">
+                <label for="exampleInputName">E Mail</label>
+                <input class="form-control" id="exampleInputName" type="email" name="email" aria-describedby="nameHelp" placeholder=" Enter Email">
+              </div>
+           <div class="form-group">
+                <label for="exampleInputName">Phone Number</label>
+                <input class="form-control" id="exampleInputName" type="text" name="pnom" aria-describedby="nameHelp" placeholder="Enter Phone Number" required="">
+              </div>
+          <div class="form-group">
+                <label for="exampleInputName">Address 1 :</label>
+                <input class="form-control" id="exampleInputName" type="text" name="address1" aria-describedby="nameHelp" placeholder="Enter address 1" required="">
+              </div>
+          <div class="form-group">
+                <label for="exampleInputName">Address 2 :</label>
+                <input class="form-control" id="exampleInputName" type="text" name="address2" aria-describedby="nameHelp" placeholder="Enter address 2">
+              </div>
+
+           <div class="form-group">
+                <label for="exampleInputName">province  :</label>
+                <select class="form-control" name="province">
+                                        <option value="West">West</option>
+                                        <option value="north">north</option>
+                                        <option value="North">North Central</option>
+                                        <option value="Uva">Uva</option>
+                                        <option value="Sabaragamuwa">Sabaragamuwa</option>
+                                        <option value="East">East</option>
+                                        <option value="South">South</option>
+                                        <option value="South">Central</option>
+                                    </select>
+           <div class="form-group">
+                <label for="exampleInputName">District  :</label>
+                <select class="form-control" name="district">
+                                        <option value="colombo">colombo</option>
+                                        <option value="gampaha">gampaha</option>
+                                        <option value="kalaniya">kalaniya</option>
+                                        <option value="kaluthara">kaluthara</option>
+                                        <option value="jaffna">jaffna</option>
+                                        <option value="kilinochchiya">Kilinochchiya</option>
+                                        <option value="thalei_mannaram">Thalei mannaram</option>
+                                        <option value="anuradapura">Anuradapura</option>
+                                        <option value="polonnaruwa">polonnaruwa</option>
+                                        <option value="kurunagala">kurunagala</option>
+                                        <option value="Badulla">Badulla</option>
+                                         <option value="Monaragala">Monaragala</option>
+                                        <option value="rathnapura">rathnapura</option>
+                                        <option value="balangoda">balangoda</option>
+                                        <option value="amparaa">ampara</option>
+                                        <option value="madakalapuwa">madakaluwa</option>
+                                        <option value="Galle">Galle</option>
+                                        <option value="mathara">Mthara</option>
+                                        <option value="hambanthota">Hambanthota</option>
+                                        <option value="kandy">kandy</option>
+                                        <option value="Nuwara_eliya">Nuwara Eliya</option>
+                                        <option value="kagalle">Kagalle</option>
+
+                                    </select>
+           <div class="form-group">
+                <label for="exampleInputName">Office Address :</label>
+                <input class="form-control" id="exampleInputName" type="text" name="of_address" aria-describedby="nameHelp" placeholder="Enter  office address">
+              </div>
+            <div class="form-group">
+                <label for="exampleInputName">Office Contact Number :</label>
+                <input class="form-control" id="exampleInputName" type="text" name="cnom" aria-describedby="nameHelp" placeholder="Enter official number">
+              </div>
+
+          <div class="form_group">
+            <label type="radio" class="form_control">Gender</label>
+            <div class="custom-radio"><label><input type="radio" name="gender" value="Male">Male              <input type="radio" name="gender" value="Female">Female</label>
+                </div>
+              <div class="form_group">
+            <label type="radio" class="form_control">Maritical</label>
+            <div class="custom-radio"><label><input type="radio" name="maritical" value="marrid">Yes             <input type="radio" name="maritical" value="unmarrid">No</label>
+                </div>
+          <div class="form-group">
+            </div>
+           <button type="submit" class="btn btn-info btn-lg" name="btn" value="submit" >Save</button>
+               <button type="reset" class="btn btn-info btn-lg" name="bttn" value="Reset" >Reset</button>
+
+       </form>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript-->
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+    </div>
+  </div>
+</body>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>E loan system 2017</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="/logout">Logout</a>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../static/js/sb-admin.min.js"></script>
+  </div>
+</body>
+
+</html>

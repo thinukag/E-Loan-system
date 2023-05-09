@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>E-Loan-system</title>
+  <!-- Bootstrap core CSS-->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="../static/css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">loan system</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="{{ url_for('home_f') }}">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Home</span>
+          </a>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+<!-- MAIN CONTENT -->
+      <div class="main-content">
+        <div class="container-fluid">
+          <!-- OVERVIEW -->
+          <div class="panel panel-headline">
+            <div class="panel-heading">
+              <h3 class="panel-title">View reject and Approval loan</h3>
+            </div>
+                        <div class="table-wrapper">
+                            <table class="table table-striped" style="font-size: 0.69rem">
+                                <thead>
+                                <tr>
+                                        <td>Application Id</td>
+                                        <td>Client Name</td>
+                                        <td>Client Nic</td>
+                                        <td>Trial cal ID</td>
+                                        <td>Loan type</td>
+                                        <td>Loan Amount</td>
+                                        <td>Loan period</td>
+                                        <td>Rate</td>
+                                        <td>Installment</td>
+                                        <td>Interest</td>
+                                        <td>Total amount</td>
+                                        <td>Status</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    {% for id in values %}
+                                        <tr class="odd gradeX" onclick="javascript:showRow(this);">
+                                            <td>{{ id[0] }}</td>
+                                            <td>{{ id[1] }}</td>
+                                            <td>{{ id[2] }}</td>
+                                            <td>{{ id[3] }}</td>
+                                            <td>{{ id[4] }}</td>
+                                            <td>{{ id[5] }}</td>
+                                            <td>{{ id[6] }}</td>
+                                            <td>{{ id[7] }}</td>
+                                            <td>{{ id[8] }}</td>
+                                            <td>{{ id[9] }}</td>
+                                            <td>{{ id[10 ] }}</td>
+                                            <td>{{ id[11 ] }}</td>
+                                {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+    {#    show data in form view when click the table row#}
+    function showRow(row)
+    {
+        var x =  row.cells;
+        document.getElementById("id").value = x[0].innerHTML;
+        document.getElementById("f_name").value = x[1].innerHTML;
+        document.getElementById("m_name").value = x[2].innerHTML;
+        document.getElementById("l_name").value = x[3].innerHTML;
+        document.getElementById("nic").value = x[4].innerHTML;
+        document.getElementById("dob").value = x[5].innerHTML;
+        document.getElementById("email").value = x[6].innerHTML;
+        document.getElementById("pnom").value = x[7].innerHTML;
+        document.getElementById("address1").value = x[8].innerHTML;
+        document.getElementById("address2").value = x[9].innerHTML;
+        document.getElementById("province").value = x[10].innerHTML;
+        document.getElementById("district").value = x[11].innerHTML;
+        document.getElementById("of_address").value = x[12].innerHTML;
+        document.getElementById("cnom").value = x[13].innerHTML;
+        document.getElementById("gender").value = x[14].innerHTML;
+        document.getElementById("maritical").value = x[15].innerHTML;
+    }
+    function deletefunc(){
+        var val= confirm("Do you want to Delete  Record?")
+        if(val){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    {#    disable and enable the modify button#}
+    $(document).ready(function(){
+        $('input[id = "active"]').attr('disabled', true);
+        $('input[type = "text"]').on('keyup', function(){
+            var text_value1 = $("#id").val();
+            var text_value2  = $("#f_name").val();
+            var text_value3  = $("#m_name").val();
+            var text_value4  = $("#l_name").val();
+            var text_value5  = $("#nic").val();
+            var text_value6 = $("#dob").val();
+            var text_value7  = $("#email").val();
+            var text_value8  = $("#pnom").val();
+            var text_value9  = $("#address1").val();
+            var text_value10  = $("#address2").val();
+            var text_value11  = $("#province").val();
+            var text_value12 = $("#district").val();
+            var text_value13  = $("#of_address").val();
+            var text_value14  = $("#cnom").val();
+            var text_value15  = $("#gender").val();
+            var text_value16  = $("#maritical").val();
+            if(text_value1 != '' || text_value2 != '' || text_value3 != '' || text_value4 != '' || text_value5  != '' || text_value6 != '' || text_value7 != '' || text_value8  != '' || text_value9 != '' || text_value10 != '' || text_value11  != '' || text_value12 != '' || text_value13 != '' || text_value14  != '' || text_value15 != '' || text_value16 != ''){
+                $('input[id = "active"]').attr('disabled', false);
+            }else{
+                $('input[id = "active"]').attr('disabled', true);
+            }
+        })
+    })
+</script>
+  <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="../static/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+  <script src="../static/vendor/chartist/js/chartist.min.js"></script>
+  <script src="../static/js/klorofil-common.js"></script>
+
+        <!--footer section end-->
+  </section>
+
+<script src="../static/js/jquery.nicescroll.js"></script>
+<script src="../static/js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+   <script src="../static/js/bootstrap.min.js"></script>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>E loan system 2017</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="/logout">Logout</a>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../static/js/sb-admin.min.js"></script>
+  </div>
+</body>
+
+</html>

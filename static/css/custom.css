@@ -1,0 +1,228 @@
+body{
+	background-image:url('001.jpg');
+}
+
+.loginform{
+	width:300px;
+	height:250px;
+	padding:10px;
+	margin:50px auto;
+	border-radius:10px;
+	box-shadow:0px 0px 10px #000;
+	
+}
+
+.loginform:hover{
+	box-shadow:0px 0px 10px #00a8ff;
+}
+
+.Loginbtn{
+	float:right;
+}
+.register{
+	width:400px;
+	box-shadow:0px 0px 10px #000;
+	margin:10px auto;
+	padding:10px;
+	border-radius:10px;
+}
+
+.register:hover{
+	box-shadow:0px 0px 10px #00a8ff;
+}
+
+.rdobtn{
+	height:20px;
+	width:20px;
+}
+
+.lbl{
+	display:inline;
+	width:50px;
+}
+
+#topbar{
+	width:100%;
+	height:60px;
+	box-shadow:0px 0px 5px #00a8ff;
+	padding:10px;
+	border-radius: 10px;
+}
+
+#sideBar{
+	width:280px;
+	height:900px;
+	background-color: #bdf0f9;
+	padding:8px;
+	float:left;
+	margin-top: 20px;
+	border-radius: 10px;
+	box-shadow:0px 0px 4px #000;
+}
+
+.dashboard{
+	padding:20px;
+	border-radius: 15px;
+	width: 95%;
+    height: 1050px;
+	margin:10px auto;
+	box-shadow:0px 0px 10px #000;
+}
+
+.userName{
+	float:left;
+	margin-left: 10px;
+
+}
+
+.logout{
+	float:right;
+	margin-right: 25px;
+}
+
+#time{
+	float:right;
+	margin-top:6px;
+	font-size:20px;
+}
+
+.composebtn{
+	width:100%;
+	
+}
+
+.slectmailbtn{
+	width:100%;
+	margin-bottom: 5px;
+}
+
+.body{
+	height:900px;
+	width:950px;
+	box-shadow:0px 0px 4px #00a8ff;
+	float:right;
+	margin-right:0px;
+	margin-top: 20px;
+	border-radius: 10px;
+}
+
+.selectEmail{
+	margin-top: 30px;
+}
+
+#Mailinbox{
+	margin:0 auto;
+	overflow:auto;
+	padding:10px;
+	
+}
+
+#Mailtrash{
+	overflow:auto;
+	padding:10px;
+	margin:0 auto;
+	display:none;
+}
+
+#Mailoutbox{
+	overflow:auto;
+	padding:10px;
+	margin:0 auto;
+	display:none;
+	
+}
+
+#composeMail{
+	width:500px;
+	margin:50px auto;
+	display:none;
+}
+#myIFrame{
+    margin-top:5px;
+    margin-left:9px;
+}
+
+.sendbtn{
+	width:250px;
+	float:right;
+	
+}
+
+.delete{
+	width:100px;
+	float:right;
+	margin:5px;
+	margin-right:10px;
+}
+
+#search {
+    float: right;
+    margin-top: 9px;
+    width: 250px;
+}
+
+.search {
+    padding: 5px 0;
+    width: 230px;
+    height: 30px;
+    position: relative;
+    left: 10px;
+    float: left;
+    line-height: 22px;
+}
+
+.search input {
+        position: absolute;
+        width: 0px;
+        float: Left;
+        margin-left: 210px;
+        -webkit-transition: all 0.7s ease-in-out;
+        -moz-transition: all 0.7s ease-in-out;
+        -o-transition: all 0.7s ease-in-out;
+        transition: all 0.7s ease-in-out;
+        height: 30px;
+        line-height: 18px;
+        padding: 0 2px 0 2px;
+        border-radius:1px;
+    }
+
+.search:hover input, .search input:focus {
+    width: 200px;
+    margin-left: 10px;
+}
+
+.btn {
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    border-radius:1px;
+}
+.clickable
+{
+    cursor: pointer;
+}
+
+.clickable .glyphicon
+{
+    background: rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px
+}
+
+.panel-heading span
+{
+    margin-top: -23px;
+    font-size: 15px;
+    margin-right: -9px;
+}
+a.clickable { color: inherit; }
+a.clickable:hover { text-decoration:none; }
+
+.col-md-6{
+    margin-top: 10px;
+    margin-left: 10px;
+    width:275px;
+ 
+}
